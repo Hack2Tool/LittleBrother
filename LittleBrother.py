@@ -45,45 +45,41 @@ thread_loading()
 
 
 mainOption = """
- [1] Lookup
- [2] Other tool
- [3] Profiler
- [4] Change country
+ [1] Пробивы
+ [2] Другие утилиты
+ [3] Профилер
 
- [e] Exit script    [h] Help Message    [c] Clear Screen"""
+ [e] Выйти из скрипта    [h] Помощь    [c] Очистить экран"""
 
 
 lookupOption = """
- [1] Personne lookup          [8] Mail tracer
- [2] Username lookup          [9] Employés recherche
- [3] Adresse lookup           [10] Google search
- [4] Phone lookup             [11] Facebook GraphSearch
- [5] IP lookup                [12] twitter info
- [6] SSID locator             [13] instagram info
- [7] Email lookup
+ [1] Пробив человека          [8] Пробить письмо
+ [2] Пробив по нику           [9] Пробив работников
+ [3] Пробив по адресу         [10] Поиск в Google
+ [4] Пробив по телефону       [11] Facebook GraphSearch
+ [5] Пробив по IP             [12] Пробив Твиттера
+ [6] SSID локатор             [13] Пробив Инстаграма
+ [7] Пробив по эмейлу
 
- [b] back main menu    [e] Exit script    [h] Help Message    [c] Clear Screen"""
+ [b] вернуться в меню   [e] выйти из скрипта    [h] помощь    [c] очистить экран"""
 
 otherToolOption = """
- [1] Hash decrypter
+ [1] Hash декодер
 
- [b] back main menu    [e] Exit script    [h] Help Message    [c] Clear Screen
+ [b] вернуться в меню    [e] выйти из скрипта    [h] помощь    [c] очистить экран
 """
 
 profilerOption = """
- [1] Profiler
- [2] Show all Profiles
- [3] Create profile
+ [1] Профилер
+ [2] Показать профили
+ [3] Создать профиль
 
- [b] back main menu    [c] Clear screen   [h] Help message
+ [b] вернуться в меню    [c] очистить экран   [h] помощь
 """
 
 countryMenu = """
- [1] FR (France)     [4] LU (Luxembourg)
- [2] BE (Belgique)   [5] All (FR, BE, CH, LU)
- [3] CH (Suisse)
 
- [b] back main menu   [c] Clear screen   [h] Help message
+ [b] вернуться в меню    [c] очистить экран   [h] помощь
 """
 
 clear()
@@ -110,7 +106,7 @@ try:
 				pr.loadDatabase(settings.pathDatabase)
 				database = pr.database
 
-				choix = input("\n LittleBrother("+Fore.BLUE + "Profiler" + Fore.RESET + ")$ ")
+				choix = input("\n LittleBrother("+Fore.BLUE + "Профилер" + Fore.RESET + ")$ ")
 
 				info = {"URL": {}}
 				
@@ -126,50 +122,50 @@ try:
 					menu()
 					print(profilerOption)
 				elif choix.lower() == 'e' or choix.lower() == 'exit':
-					sys.exit("\n"+information+" Bye ! :)")
+					sys.exit("\n"+information+" Пока ! :)")
 				elif choix.lower() == "1":
 					if pr.count >= 1:
 						while True: 
-							profile = input(" Profil: ")
+							profile = input(" Профиль: ")
 							if profile != '':
 								break
 						data = pr.searchDatabase(profile, database=database)
 						profilerFunc(data, path=settings.pathDatabase)
 					else:
-						print(warning+" Aucun profil trouvé. Veuillez en créer un.")
+						print(warning+" Профиль не найден. Пожалуйста, создайте его.")
 				elif choix.lower() == "2":
 					pr.showAllProfiles(database=database)
 
 				elif choix.lower() == '3':
-					print("\n"+Fore.YELLOW+"(Format: Prenom Nom)"+Fore.RESET)
+					print("\n"+Fore.YELLOW+"(Формат: Имя Фамилия)"+Fore.RESET)
 					while True: 
-						name = input(" Nom du Profil: ")
+						name = input(" Имя профиля: ")
 						if name != '':
 							break
 					name = name.split(" ")
 					name = [i.capitalize() for i in name]
 					name = " ".join(name)
 					while True:
-						print(question+" Voulez vous inscrire un compte Twitter pour se profile ?")
+						print(question+" Хотите зарегистрировать учетную запись Twitter для профиля?")
 						choixPr = input(" [O/n]: " )
 						if choixPr.upper() == 'N':
 							break
 						else:
-							twitter = input("\n Twitter: ")
+							twitter = input("\n Твиттер: ")
 							info['URL']['Twitter'] = twitter
 							break
 					# print(found+" %s" % (twitter))
 					while True:
-						print(question+" Voulez vous inscrire un compte Instagram pour se profile ?")
+						print(question+" Хотите зарегистрировать учетную запись Instagram для профиля?")
 						choixPr = input(" [O/n]: " )
 						if choixPr.upper() == 'N':
 							break
 						else:
-							instagram = input("\n Instagram: ")
+							instagram = input("\n Инстаграм: ")
 							info['URL']['Instagram'] = instagram
 							break
 					while True:
-						print(question+" Voulez vous inscrire un compte Facebook pour se profile ?")
+						print(question+" Хотите зарегистрировать учетную запись Facebook для профиля?")
 						choixPr = input(" [O/n]: " )
 						if choixPr.upper() == 'N':
 							break
@@ -181,12 +177,12 @@ try:
 					create = pr.writeProfile(fileName=name, path=settings.pathDatabase, info=info)
 
 					if create:
-						print("\n"+found+" Le profil '%s' a été créé avec succès." % (name))
+						print("\n"+found+" Профиль '%s' был успешно создан" % (name))
 					else:
-						print("\n"+warning+" Une erreur est survenue. Le profil '%s' n'a pas pu être créé." % (name))
+						print("\n"+warning+" Произошла ошибка. Не удалось создать профиль '%s'." % (name))
 
 		elif choix.lower() == 'e' or choix.lower() == 'exit':
-			sys.exit("\n"+information+" Bye ! :)")
+			sys.exit("\n"+information+" Пока ! :)")
 		elif choix == '1':
 			clear()
 			menu()
@@ -236,13 +232,13 @@ try:
 					sys.exit("\n"+information+" Bye ! :)")
 				else:
 					pass
-					# print("Commande introuvable")
+					# print("Команда не найдена")
 		elif choix == '2':
 			clear()
 			menu()
 			print(otherToolOption)
 			while True:
-				se = input("\n LittleBrother("+Fore.BLUE+"OtherTool"+Fore.BLUE + "" + Fore.RESET + ")$ ")
+				se = input("\n LittleBrother("+Fore.BLUE+"Другие утилиты"+Fore.BLUE + "" + Fore.RESET + ")$ ")
 				if se == 'h':
 					print(helpOtherTool)
 				elif se == "1":
@@ -318,4 +314,4 @@ try:
 			# print("Commande introuvable")
 
 except KeyboardInterrupt:
-	sys.exit("\n"+information+" Bye ! :)")
+	sys.exit("\n"+information+" Пока ! :)")
