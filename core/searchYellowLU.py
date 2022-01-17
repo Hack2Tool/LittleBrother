@@ -32,7 +32,7 @@ def searchYellowLU(url):
 	regroup = zip(nameList2,adresseList2, regionList2, phoneList2)
 
 	TABLE_DATA = [
-		("Name", "Adresse", "Region", "Telephone"),
+		("Имя", "Адрес", "Регион", "Телефон"),
 	]
 
 	for r in regroup:
