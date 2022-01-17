@@ -1,64 +1,53 @@
 helpMain = """
- Name                       Action
+ Название                   Дейстие
  ----                       ------
- Lookup                     Faire des recherches sur une personne.
- Other Tool                 Utiliser des outils autre que pour de la reconnaissance.
- Make file                  Creer un fichier '.txt' pour y ecrire les infos obtenu.
- Show Database              Accedez a la base de donnee.
+ Пробивы                    Пробейте любого человека.
+ Другие утилит              Другие утилиты, не связанные с пробивом.
+ Создать файл               Создание файла .txt для записи полученной информации.
+ Показать датабазу          Доступ к базе данных.
 
- Exit                       Quitter le logiciel.
- Help                       Affiche se message.
- Clear                      Efface l'ecran."""
+ Выйти из скрипта           .
+ Помощь                     Отображает это сообщение.
+ Очистить экран             Очистить экран."""
 
 helpLookup = """
- Name                             Action
+ Название                         Дейстие
  ----                             ------
-[1]  Personne lookup                  Faire des recherches avec un nom, prenom et (ville).
-[2]  Username lookup                  Faire des recherches avec un pseudonyme.
-[3]  Adresse lookup                   Faire des recherches avec une adresse.
-[4]  Phone lookup                     Faire des recherches avec un numero de telephone.
-[5]  IP lookup                        Faire des recherches avec une adresse IP.
-[6]  SSID locator                     Faire des recherches avec une adresse MAC/BSSID
-[7]  Email lookup                     Faire des recherches avec une adresse email.
-[8]  Mail tracer                      Faire des recherches avec l'entete d'un mail.
-[9]  Employés recherche               Recherche les employés d'une entreprise.
-[10] Google search                    Faire des recherches sur google.
-[11] Facebook graphSearch             Faire des recherche grace au graphSearch.
-[12] twitter info                     Recuperer les informations d'un compte Twitter.
-[13] instagram info                   Recuperer les informations d'un compte Instagram.
+[1]  Пробив человека                  Поиск по имени, фамилии и (городу).
+[2]  Пробив по нику                   Поиск по никнейму.
+[3]  Пробив по адресу                 Поиск по адресу.
+[4]  Пробив по телефону               Поиск по номеру телефона.
+[5]  Пробив по IP                     Поиск по IP-адресу.
+[6]  SSID локатор                     Поиск по MAC/BSSID-адресу
+[7]  Пробив по эмейлу                 Поиск по адресу электронной почты.
+[8]  Пробить письмо                   Поиск по заголовку письма.
+[9]  Пробив работников                Найдите сотрудников компании.
+[10] Поиск в Google                   Поиск в гугле.
+[11] Facebook graphSearch             Проведите исследование с помощью graphSearch.
+[12] Пробив Твиттера                  Получить информацию из учетной записи Twitter.   
+[13] Пробив Инстаграмма               Получить информацию из учетной записи Instagram.
 
-[b]  Back main menu                   Revenir au menu principal.
-[e]  Exit script                      Pour quitter le logiciel.
-[c]  Clear screen                     Efface l'ecran.
-[h]  Help Message                     Affichez ce message."""
+[b]  вернуться в меню                 Вернуться в главное меню.  
+[e]  выйти из скрипта                 Выход из программы.
+[c]  очистить экран                   .
+[h]  помощь                           Отображает это сообщение."""
 helpOtherTool = """
- Name                             Action
+ Название                         Дейстие
  ----                             ------
- Hash decrypter                   Essaye de décrypter un hash via une base de donnée en ligne.
+ Hash декодер                     Попытка расшифровать хэш через онлайн-базу данных.
 
- Back main menu                   Revenir au menu principal.
- Exit script                      Pour quitter le logiciel.
- Clear screen                     Efface l'ecran."""
+ вернуться в меню                 .
+ выйти из скрипта                 .
+ очистить экран                   ."""
 
 helpProfiler = """
- Name                      Action
+ Название                  Дейстие
  ----                      ------
- Search Profiles           Recherche un profile dans la base de donnee.
- Show all Profiles         Affiche tout les profiles de la base de donnee.
+ Поиск профилей            Ищет профиль в базе данных.
+ Показать профили          Отображает все профили в базе данных.
 
- Exit Database             Quitte la base de donnee pour retourner au menu principal.
- Help message              Affiche se message
+ Выйти из датабазы         Выход из базы данных для возврата в главное меню.
+ Помощь                    Показать сообщение.
 """
 
-helpCountry = """
- Name                      Action
- ----                      ------
- FR                        Utiliser les services Francais.
- BE                        Utiliser les services Belge.
- CH                        Utiliser les services Suisse.
- LU                        Utiliser les services Luxembourgeois.
- All                       Utiliser tout les services.
-
- Back main menu            Revenir au menu principal.
- Exit script               Pour quitter le logiciel.
- Clear screen              Efface l'ecran."""
+helpCountry = """"""
